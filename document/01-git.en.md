@@ -6,10 +6,8 @@ In this step, we will learn how to use Git and GitHub.
 
 * (JA)[Gitを使ったバージョン管理](https://backlog.com/ja/git-tutorial/intro/01/)
 * (JA)[Udemy Business - Git：はじめてのGitとGitHub](https://mercari.udemy.com/course/intro_git/)
-
 * (EN)[Git basics](https://www.atlassian.com/git)
 * (EN)[Udemy Business - GitHub Ultimate: Master Git and GitHub - Beginner to Expert](https://mercari.udemy.com/course/github-ultimate/)
-
 
 
 ## Fork this **mercari-build-training** repository
@@ -29,6 +27,8 @@ In this step, we will learn how to use Git and GitHub.
    
 2. Set your name and email address using git config. Check if your email address shows up.
    ```shell
+   $ git config --global user.name "<your name>"
+   $ git config --global user.email "<your-email-address>"
    $ git config user.email
    <your-email-address>
    ```

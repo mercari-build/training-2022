@@ -6,15 +6,16 @@ Choose either Python or Go and build your local environment.
 ## Building Python environment
 
 ### 1. Install Python
-* If your local version is below Python3.8, install Python3.10.
-* If you have Python3.8 or above, you can skip the installation step.
+* If your local version is below Python3.9, install Python3.13.
+* If you have Python3.9 or above, you can skip the installation step.
 
 ### 2. Check your Python version
 
 * Check if the Python is added to your PATH (usable as commands on your terminal) with the following command.
 
 ```shell
-$ python -V
+$ python3 -V
+# Or $ python -V
 ```
 
 If the version does not correspond to the Python version you installed, double check your installation as it is not **added to your PATH**.
@@ -32,9 +33,11 @@ You can install the dependencies by running the following command.
 $ cd python
 
 # Create virtual environment for this application
-$ python -m venv .venv
-$ source .venv/bin/activate
-# When you use non-UNIX os, the activation method is different.
+$ python3 -m venv .venv　
+
+# Activate virtual environment
+$ source .venv/bin/activate # for Mac or Unix user
+$ ./venv/Scripts/activate # for Windows user
 
 # Install required library
 $ pip install -r requirements.txt
@@ -42,7 +45,7 @@ $ pip install -r requirements.txt
 
 If you added a library, make sure you add it to `requirements.txt`.
 
-`python -m venv .venv` is a command to create a Python virtual environment.
+`python3 -m venv .venv` is a command to create a Python virtual environment.
 A virtual environment is a way to create a project-specific Python environment.
 Using a virtual environment allows you to manage necessary packages separately for each project so that you can avoid dependency conflicts between different projects.
 Once the virtual environment is created, it must be activated by the `source .venv/bin/activate` command.

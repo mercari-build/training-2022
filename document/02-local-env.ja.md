@@ -6,35 +6,43 @@ PythonかGoから1つの言語を選び、環境を作りましょう。
 ## Pythonの環境を作る
 
 ### 1. Pythonをインストールする
-* Python3.8以上がインストールされていない場合、Python3.10をインストールします
-* すでに3.8以上がインストール済みの方はskipして問題ないです
+* Python3.9以上がインストールされていない場合、Python3.13をインストールします
+* すでに3.9以上がインストール済みの方はskipして問題ないです
 
 ### 2. Pythonのバージョンをチェックする
 
 * インストールしたPythonにパスが通っている(=ターミナルから使える状態)か確認します。
 
 ```shell
-$ python -V
+$ python3 -V 
+# もしくは $ python -V
 ```
 
 表示されるPythonのバージョンがインストールしたものではなければ、**パスが通っていない**状態なので確認してください。
 
 **:book: Reference**
 
-* [PATHを通すとは？- 初心者でも分かる解説](https://hara-chan.com/it/programming/environment-variable-path/)
+* [「PATHが通っている」とはどういう状態か?](https://zenn.dev/d0ne1s/articles/1f435463551ac2)
+* Windowsの方向け [【環境構築 入門】PATHの通し方 – Windows11, M1 Mac 対応 –](https://www.kikagaku.co.jp/kikagaku-blog/path/)
 
 ### 3. 依存ライブラリをインストールする
 
 Pythonでは、`requirements.txt`というファイルに依存しているライブラリの一覧を記載します。
 以下のコマンドを実行することで、依存ライブラリをまとめてインストールすることができます。
 
+### Unix or Mac
 ```shell
 $ cd python
 
 # 仮想環境をつくる
-$ python -m venv .venv
-$ source .venv/bin/activate
-# Unixを利用していない場合コマンドが違うことがあります
+$ python3 -m venv .venv
+
+# 仮想環境をアクティベートする  
+$ source .venv/bin/activate  # Unix / Macの場合
+$ ./venv/Scripts/activate    # windowsの場合
+
+# 今回使うPythonのパスを確認する。
+$ which python
 
 # 必要なライブラリをインストールする
 $ pip install -r requirements.txt

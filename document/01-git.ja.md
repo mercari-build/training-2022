@@ -6,9 +6,9 @@
 
 * (JA)[Gitを使ったバージョン管理](https://backlog.com/ja/git-tutorial/intro/01/)
 * (JA)[Udemy Business - Git：はじめてのGitとGitHub](https://mercari.udemy.com/course/intro_git/)
-
 * (EN)[Git basics](https://www.atlassian.com/git)
 * (EN)[Udemy Business - GitHub Ultimate: Master Git and GitHub - Beginner to Expert](https://mercari.udemy.com/course/github-ultimate/)
+
 ## **mercari-build-training** リポジトリをフォークする
 
 * [mercari-build-training](https://github.com/mercari-build/mercari-build-training)
@@ -25,8 +25,10 @@
    * Macを使っている場合: [brew](https://brew.sh/index_ja) をインストールしてから `brew install git`を実行
    * For Windows user: Download [installer](https://gitforwindows.org/)
 
-2. git configに自分の名前とemailアドレスを設定します。以下のコマンドを実行してあなたのemailアドレスが表示されればOKです。
+2. git configに自分の名前とemailアドレスを設定します。以下のコマンドを実行して最後にあなたのemailアドレスが表示されればOKです。
    ```shell
+   $ git config --global user.name "<your name>"
+   $ git config --global user.email "<your-email-address>"
    $ git config user.email
    <your-email-address>
    ```
